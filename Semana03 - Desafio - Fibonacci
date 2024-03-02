@@ -1,0 +1,38 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int num1 = 0;
+    int num2 = 1;
+    int i;
+  Console.WriteLine("Quantos números em série Fibonacci você quer?");
+    int quantidade = int.Parse(Console.ReadLine());
+    Console.WriteLine("");
+      
+    
+    while (quantidade < 0 || quantidade > 46){
+      Console.WriteLine("Número inválido, digite um número entre 2 e 46.");
+      quantidade = int.Parse(Console.ReadLine());
+      
+      }
+      Console.WriteLine("");
+      Console.Write(num1);
+      Console.Write(" ");
+      Console.Write(num2);
+      Console.Write(" ");
+    for (i=1; i<=(quantidade - 2); i++){
+      
+      int num3 = num1+num2;
+      Console.Write(num3);
+      if(i<(quantidade - 2)){
+        Console.Write(" ");
+      }
+      else{
+        Console.Write("");
+      }
+      num1 = num2;
+      num2 = num3;
+    }
+    }
+    //Console.WriteLine("Fim");
+}
