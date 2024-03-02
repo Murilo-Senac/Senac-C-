@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+  static void Main () {
+    Console.Write("Digite o tempo da viagem: ");
+    float tempo = float.Parse(Console.ReadLine());
+    Console.Write("Digite a velocidade média: ");
+    float velocidade = float.Parse(Console.ReadLine());
+
+    float distancia = tempo * velocidade;
+    double litros = distancia / 12f;
+    litros = Math.Round(litros, 3);
+
+    Console.WriteLine("Serão necessários " + litros + " litros.");
+    
+  }
+}
