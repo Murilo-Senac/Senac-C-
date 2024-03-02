@@ -6,12 +6,13 @@ class Program {
     double preco = 0f;
     //bool valido = false;
     
+    Console.WriteLine("Produtos: ");
     Console.WriteLine("1 - Cachorro Quente");
     Console.WriteLine("2 - X-Salada");
     Console.WriteLine("3 - X-Bacon");
     Console.WriteLine("4 - Torrada Simples");
     Console.WriteLine("5 - Refrigerante");
-
+    Console.WriteLine("");
   
     Console.Write( "Digite o código do produto: ");
     int codigo = int.Parse(Console.ReadLine());
@@ -24,6 +25,7 @@ class Program {
     else { 
       Console.Write( "Digite a quantidade comprada: ");
       int quantidade = int.Parse(Console.ReadLine());
+      Console.WriteLine("");
     
     if (codigo == 1){
       Console.WriteLine("+"+quantidade+" Cachorro Quente");
