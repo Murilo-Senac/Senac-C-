@@ -1,0 +1,52 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    double [,] m = new double [12,12]/*{
+      {1,1,1},
+      {2,2,2},
+      {3,3,3},
+    }*/;
+    int l, i, j;
+    char t;
+    double soma = 0f, media = 0f;
+
+    
+  Console.Write("Digite o número da linha: ");
+  l = int.Parse(Console.ReadLine());
+
+  Console.Write("Digite S para soma ou M para média: ");
+  t = char.Parse(Console.ReadLine());
+
+    
+    for(i=0;i<12;i++){
+    for(j=0;j<12;j++){
+      Console.Write($"Digite o valor da posição m[{i},{j}]: ");
+      m[i,j] = double.Parse(Console.ReadLine());
+      }}
+
+    
+    if (t == 'S' || t == 's'){
+      for(i=l;i<l+1;i++){
+        for(j=0;j<12;j++){
+          soma = soma + m[i,j];
+        }
+      }
+      Console.WriteLine($"A soma é: {soma}");
+    }
+    else if (t == 'M' || t == 'm'){
+      for(i=l;i<l+1;i++){
+        for(j=0;j<12;j++){
+          soma = soma + m[l,j];  
+          media = (soma / 12) ;  
+        }
+      }
+      media = Math.Round(media,1);
+      Console.WriteLine($"A media é: {media}");
+   }
+    else{
+     Console.WriteLine("Opção inválida");
+    }
+    
+  }
+}
