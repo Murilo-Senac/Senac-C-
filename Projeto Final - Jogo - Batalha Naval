@@ -1,0 +1,48 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int n1, n2;
+    double[,] tabela =  new double[5,5];
+    int col, lin;
+    int contbarcos = 3;
+    int tent = 0;
+
+    Random rndm = new Random();
+
+    for(int i = 0; i < 5; i++){
+      n1 = rndm.Next(0,4);
+      n2 = rndm.Next(0,4);
+
+      tabela[n1,n2] = 1;
+    }
+
+
+    while(contbarcos > 0){
+      Console.WriteLine("Digite a linha (de 0 a 4): ");
+      lin = int.Parse(Console.ReadLine());
+      Console.WriteLine("Digite a coluna (de 0 a 4): ");
+      col = int.Parse(Console.ReadLine());
+
+      //if (lin > 0 || lin < 4 || col > 0 || col < 4){
+        
+      if(tabela[lin,col] == 1){
+        Console.WriteLine("Acertou um barco!");
+        contbarcos--;
+        tent++;
+      }
+      else{
+        Console.WriteLine("Errou!");
+        tent++;
+        
+      }
+        }
+     /* else{
+      Console.WriteLine("Você afundou, essa área não existe!");}
+    }*/
+
+    Console.Clear();
+    Console.WriteLine("Todos os barcos foram destruídos!");
+    Console.WriteLine("Você precisou de " + tent + " tentativas");
+  }
+}
